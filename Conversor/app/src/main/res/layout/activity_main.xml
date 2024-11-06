@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/footer"
+        android:paddingBottom="50dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conversor de Números"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/inputField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Valor a converter"
+                android:padding="10dp"
+                android:inputType="text"
+                android:background="@drawable/edittext_background"
+                android:digits="0123456789ABCDEFabcdef"
+                android:layout_marginBottom="16dp"/>
+
+            <Spinner
+                android:id="@+id/inputBaseSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <Spinner
+                android:id="@+id/outputBaseSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/convertButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Converter"
+                android:backgroundTint="#6200EE"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/outputField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultado: "
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:background="@drawable/textview_background"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingBottom="16dp"
+                android:backgroundTint="#E0E0E0"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© 2024 Feito Por Rafael - Todos os direitos reservados"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
